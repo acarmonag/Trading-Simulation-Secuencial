@@ -24,7 +24,7 @@ class Scanner:
                         'Bajo': row[3],
                         'Cierre': row[4]
                     })
-            self.chart.graficar_velas_chinas()
+            self.chart.graficar_velas_japonesas()
             f.close()
 
         except FileNotFoundError:
@@ -47,7 +47,7 @@ class Scanner:
                         'Bajo': contenido['low'][i],
                         'Cierre': contenido['close'][i]
                     })
-            self.chart.graficar_velas_chinas()
+            self.chart.graficar_velas_japonesas()
             f.close()
 
         except FileNotFoundError:

@@ -32,17 +32,16 @@ def main():
     nombre_archivo = ruta = f"{parsed_args['-m']}_{parsed_args['-p']}.{parsed_args['-f'].lower()}"
 
     if parsed_args["-f"] == "CSV":
-        #ModedasCSV\BRENTCMDUSD_H1.csv
+        
         #ruta = f".\MonedasCSV\{parsed_args['-m']}_{parsed_args['-p']}.{parsed_args['-f'].lower()}"
         ruta = os.path.join('.\MonedasCSV', nombre_archivo)
         print("Ruta: ",ruta)
         scanner.leer_csv(ruta)
-        #for fila in datos:
-        #    print(fila)
+        
         
 
     elif parsed_args["-f"] == "JSON":
-        #ruta = f"./MonedasJSON/{parsed_args['-m']}_{parsed_args['-p']}.{parsed_args['-f'].lower()}"
+        
         ruta = os.path.join('.\MonedasJSON', nombre_archivo)
         print("Ruta: ",ruta)
         scanner.leer_json(ruta)
