@@ -18,7 +18,7 @@ class Chart:
             self.ax.clear()
             segmento_data = self.data[:self.index+1]
             if len(segmento_data) >= 20:  # Si hay 20 datos
-                del self.data[0] 
+                del segmento_data[0] 
             else:
                 pass
             
@@ -40,10 +40,13 @@ class Chart:
             # Plot the SMA
             if self.index >= 4:  # Only plot the 5-period SMA if there are at least 5 data points
                 self.ax.plot(fechas_num[4:self.index+1], sma5, label='SMA 5', color='blue')
+                # Show the legend
+                self.ax.legend()
             if self.index >= 12:  # Only plot the 13-period SMA if there are at least 13 data points
                 self.ax.plot(fechas_num[12:self.index+1], sma13, label='SMA 13', color='orange')
+                # Show the legend
+                self.ax.legend()
             
-            self.ax.legend()  # Show the legend
             
             self.index += 1
 
