@@ -19,6 +19,7 @@ class Chart:
             segmento_data = self.data[:self.index+1]
             if len(segmento_data) >= 20:  # Si hay 20 datos
                 del segmento_data[0] 
+                del self.data[0]
             else:
                 pass
             
